@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shoe_app/component/bottom_nav_bar.dart';
 
 import 'Shop_page.dart';
+import 'about_page.dart';
 import 'cart_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -81,7 +82,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                const Padding(
+                 Padding(
                   padding:  EdgeInsets.only(left: 25.0),
                   child: ListTile(
                     leading: Icon(
@@ -92,6 +93,11 @@ class _HomePageState extends State<HomePage> {
                       'About',
                       style: TextStyle(color: Colors.white),
                     ),
+                    onTap: ()=> Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>AboutPage(),
+                        )),
                   ),
                 ),
               ],
